@@ -1,0 +1,3 @@
+@model Product
+@{ViewData["Title"]=Model.Name;}
+<section class="container detail-layout"><div class="detail-image"><img src="@Model.ImagePath" alt="@Model.Name"/></div><div class="detail-info"><p class="eyebrow">@Model.Category.Name / @Model.Sku</p><h1>@Model.Name</h1><p class="detail-price">@Model.Price.ToString("N0") ₫</p><p>@Model.Description</p><p class="stock">Còn lại: @Model.Stock sản phẩm</p><form asp-controller="Cart" asp-action="Add" method="post"><input type="hidden" name="id" value="@Model.Id"/><button class="btn btn-dark" disabled="@(Model.Stock<=0)">Thêm vào giỏ hàng ↗</button></form><a class="back-link" asp-action="Index">← Quay lại cửa hàng</a></div></section>

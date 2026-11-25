@@ -1,0 +1,3 @@
+@model Order
+@{ViewData["Title"]="Đặt hàng thành công";}
+<section class="container section narrow success-panel"><div class="success-mark">✓</div><p class="eyebrow">ORDER #@Model.Id</p><h1>Đơn hàng đã được ghi nhận<span>.</span></h1><p>Cảm ơn @Model.CustomerName đã lựa chọn OFFSTEP. Đơn hàng của bạn đang ở trạng thái <strong>@Model.Status</strong>.</p><div class="order-summary">@foreach(var i in Model.Items){<div><span>@i.Product.Name × @i.Quantity</span><strong>@((i.UnitPrice*i.Quantity).ToString("N0")) ₫</strong></div>}<div class="summary-total"><span>Tổng thanh toán</span><strong>@Model.Total.ToString("N0") ₫</strong></div></div><a class="btn btn-dark" asp-controller="Store" asp-action="Index">Quay lại cửa hàng ↗</a></section>

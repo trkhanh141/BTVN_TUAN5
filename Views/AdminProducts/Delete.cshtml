@@ -1,0 +1,2 @@
+@model Product
+@{ViewData["Title"]="Ẩn sản phẩm";}<section class="container section narrow"><p class="eyebrow">ADMIN / CONFIRM</p><h1 class="page-title">Ẩn sản phẩm<span>.</span></h1><p>Bạn có chắc muốn ngừng kinh doanh <strong>@Model.Name</strong>?</p><form asp-action="Delete" method="post"><input type="hidden" asp-for="Id"/><button class="btn btn-dark">Xác nhận ẩn</button> <a asp-action="Index">Hủy</a></form></section>

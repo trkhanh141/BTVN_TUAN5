@@ -1,0 +1,2 @@
+@model Category
+@{ViewData["Title"]="Xóa thể loại";}<section class="container section narrow"><h1 class="page-title">Xóa thể loại<span>.</span></h1><p>Bạn muốn xóa <strong>@Model.Name</strong>? Chỉ xóa được khi thể loại không còn sản phẩm.</p><form asp-action="Delete" method="post"><input type="hidden" asp-for="Id"/><button class="btn btn-dark">Xác nhận</button></form></section>

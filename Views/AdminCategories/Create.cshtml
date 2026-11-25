@@ -1,0 +1,2 @@
+@model Category
+@{ViewData["Title"]="Thêm thể loại";}<section class="container section narrow"><h1 class="page-title">Thêm thể loại<span>.</span></h1><form asp-action="Create" method="post" class="checkout-form"><label asp-for="Name"></label><input asp-for="Name"/><span asp-validation-for="Name"></span><label asp-for="Description"></label><textarea asp-for="Description"></textarea><button class="btn btn-dark">Lưu thể loại</button></form></section>
